@@ -25,7 +25,7 @@ df = '/kaggle/input/melanoma-cancer-dataset'
 
 # Preparing data and create training, validation, and test inputs and labels
 # label = "Benign" or "Malignant"
-X_train, X_val, y_train, y_val = model_selection.train_test_split(data, labels, test_size=0.2, random_state=1)
+X_train, X_test, y_train, y_test = model_selection.train_test_split(data, labels, test_size=0.2, random_state=1)
 
 
 '''
