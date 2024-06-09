@@ -23,7 +23,7 @@ Image dimensions: 224 x 224 pixels
 
 df = '/kaggle/input/melanoma-cancer-dataset'
 
-# Preparing data and create training, validation, and test inputs and labels
+# Preparing data and create training and test inputs and labels
 # label = "Benign" or "Malignant"
 X_train, X_test, y_train, y_test = model_selection.train_test_split(data, labels, test_size=0.2, random_state=1)
 
@@ -39,10 +39,10 @@ knn_model = KNeighborsClassifier(n_neighbors = 4)
 # Train our model
 knn_model.fit(X_train, y_train)
 
-# Test our model for validation data.
+# Test our model for test data.
 y_pred = knn_model.predict(X_test)
 
-# Print the score on the validation data.
+# Print the score on the test data.
 accuracy = accuracy_score(y_test, y_pred)
 print (accuracy)
 
